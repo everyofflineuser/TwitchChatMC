@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "twitchchat",
+  "version": "${version}",
+  "name": "TwitchChat",
+  "description": "Mod for forward Twitch Chat to In-Game Chat!",
+  "authors": ["every"],
+  "contact": {
+    "homepage": "https://github.com/everyofflineuser/TwitchChatMC",
+    "issues": "https://github.com/everyofflineuser/TwitchChatMC/issues"
+  },
+  "license": "GPL-3.0",
+  "icon": "icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "org.every.twitchchat.client.TwitchchatClient"
+    ],
+    "main": [
+      "org.every.twitchchat.Twitchchat"
+    ]
+  },
+  "mixins": [
+    "twitchchat.mixins.json",
+    {
+      "config": "twitchchat.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "*"
+  }
+}
