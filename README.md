@@ -37,8 +37,6 @@ A Fabric mod that brings your Twitch chat directly into Minecraft. Messages are 
 
 1. Install **Fabric Loader 1.21.8**
 2. Download and place in `mods/`:
-
-    * Fabric API
     * Twitch4J
     * Streamotes (optional)
     * TwitchChat
@@ -66,13 +64,14 @@ Edit `config/twitchchat.json`:
 
 ```json
 {
-  "twitchChannel": "minecraft"
+  "twitchChannel":"everyofflineuser",
+  "formatMessage":"✌ %s: %s"
 }
 ```
 
 ---
 
-## 🖼 Message Format
+## 🖼 Standart Message Format
 
 ```
 [TwitchIcon] Username: message
@@ -110,7 +109,7 @@ A: Check Twitch4J is installed – it’s required.
 A: Verify the Twitch channel name and that the stream is live.
 
 **Q: Can I change colors?**
-A: Not yet. Planned for future updates.
+A: Yep, in config/twitchchat.json
 
 ---
 
